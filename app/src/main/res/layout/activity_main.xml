@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+
+        >
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="82dp"
+            android:ems="10"
+            android:inputType="text"
+            >
+        </EditText>
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextStreet"
+            android:layout_below="@+id/editTextStreet"
+            android:layout_marginTop="22dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextName"
+            android:layout_alignParentLeft="true"
+            android:text="@string/name"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/buttonOriginal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_toRightOf="@+id/textView3"
+            android:onClick="retrieveFromOriginalDB"
+            android:text="@string/retrive" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextEmail"
+            android:layout_alignLeft="@+id/textView1"
+            android:text="@string/email"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextPhone"
+            android:layout_alignLeft="@+id/textView1"
+            android:text="@string/phone"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editTextEmail"
+            android:layout_alignLeft="@+id/textView5"
+            android:text="@string/street"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/editTextName"
+            android:layout_below="@+id/editTextEmail"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editTextCity"
+            android:layout_alignBottom="@+id/editTextCity"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/editTextEmail"
+            android:text="@string/country"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editTextStreet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextName"
+            android:layout_below="@+id/editTextPhone"
+            android:ems="10"
+            android:inputType="text"
+            >
+
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextStreet"
+            android:layout_below="@+id/editTextName"
+            android:ems="10"
+            android:inputType="phone|text"
+            />
+
+        <Button
+            android:id="@+id/buttonMigrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonOriginal"
+            android:layout_alignStart="@+id/buttonOriginal"
+            android:layout_below="@+id/buttonOriginal"
+            android:layout_marginTop="18dp"
+            android:onClick="migrateDB"
+            android:text="@string/migrate" />
+
+        <Button
+            android:id="@+id/buttonEncrypted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonMigrate"
+            android:layout_alignStart="@+id/buttonMigrate"
+            android:layout_below="@+id/buttonMigrate"
+            android:layout_marginTop="20dp"
+            android:onClick="retrieveFromEncryptedDB"
+            android:text="@string/retrive_enc" />
+
+    </RelativeLayout>
+</ScrollView>
